@@ -1,0 +1,37 @@
+{
+  "name": "ahoj-mix-v1-contracts",
+  "version": "1.0.0",
+  "description": "Smart contract for interacting with Ahoj.Mix V1",
+  "main": "index.js",
+  "scripts": {
+    "precompile": "rimraf ./build/",
+    "compile": "npx hardhat compile",
+    "pretest": "yarn compile",
+    "test": "npx hardhat test",
+    "lint": "prettier ./test/**/*.ts --check",
+    "prepublishOnly": "yarn test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bayroio/ahoj-mix-v1-contracts.git"
+  },
+  "keywords": [
+    "bayro",
+    "ahoj",
+    "ahoj.mix",
+    "defi",
+    "dex"
+  ],
+  "author": "Edgar Herrador <edgar@bayro.io>",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/bayroio/ahoj-mix-v1-contracts/issues"
+  },
+  "homepage": "https://www.ahoj.finance/",
+  "engines": {
+    "node": ">=10"
+  },
+  "devDependencies": {
+    "hardhat": "^2.1.2"
+  }
+}
