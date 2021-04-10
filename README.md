@@ -4,7 +4,7 @@ This repo contains all of the smart contracts used to run [Ahoj.Mix](https://www
 ## Deployed Contracts in Avalanche Fuji
 Factory address: `0x963ed430Ac3b10084bd6C957E9eC45F80E0CACF1`
 
-Router address: `0x963ed430Ac3b10084bd6C957E9eC45F80E0CACF1`
+Router address: `0x715920cEAa1163C892c5d2aD732FC85297bFFca4`
 
 # Local Development
 

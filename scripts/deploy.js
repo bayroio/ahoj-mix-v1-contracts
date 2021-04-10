@@ -26,7 +26,7 @@ async function main() {
 
   await ahojV1Router.deployed();
 
-  console.log("Ahoj V1 Router deployed to:", ahojV1Factory.address);
+  console.log("Ahoj V1 Router deployed to:", ahojV1Router.address);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
