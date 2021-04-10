@@ -15,18 +15,18 @@ async function main() {
 
   // We get the contract to deploy
   const AhojV1Factory = await hre.ethers.getContractFactory("AhojV1Factory");
-  const AhojV1Factory = await AhojV1Factory.deploy("0x0000000000000000000000000000000000000000");
+  const ahojV1Factory = await AhojV1Factory.deploy("0x0000000000000000000000000000000000000000");
 
-  await AhojV1Factory.deployed();
+  await ahojV1Factory.deployed();
 
-  console.log("Ahoj V1 Factory deployed to:", AhojV1Factory.address);
+  console.log("Ahoj V1 Factory deployed to:", ahojV1Factory.address);
 
   const AhojV1Router = await hre.ethers.getContractFactory("AhojV1Router");
-  const AhojV1Router = await AhojV1Router.deploy(AhojV1Factory.address, "0x5FbDB2315678afecb367f032d93F642f64180aa3");
+  const ahojV1Router = await AhojV1Router.deploy(ahojV1Factory.address, "0xd00ae08403b9bbb9124bb305c09058e32c39a48c");
 
-  await AhojV1Router.deployed();
+  await ahojV1Router.deployed();
 
-  console.log("Ahoj V1 Router deployed to:", AhojV1Factory.address);
+  console.log("Ahoj V1 Router deployed to:", ahojV1Factory.address);
 }
 
 // We recommend this pattern to be able to use async/await everywhere

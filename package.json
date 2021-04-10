@@ -8,6 +8,7 @@
     "compile": "npx hardhat compile",
     "pretest": "yarn compile",
     "test": "npx hardhat test",
+    "deploy": "npx hardhat run scripts/deploy.js",
     "lint": "prettier ./test/**/*.ts --check",
     "prepublishOnly": "yarn test"
   },
