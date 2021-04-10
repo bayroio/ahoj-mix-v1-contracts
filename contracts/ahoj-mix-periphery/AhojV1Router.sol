@@ -1,7 +1,8 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
 pragma solidity =0.6.6;
 
-import '../ahoj.mix-core/interfaces/IAhojV1Factory.sol';
-import '../ahoj.mix-lib/libraries/TransferHelper.sol';
+import '../ahoj-mix-core/interfaces/IAhojV1Factory.sol';
+import '../ahoj-mix-lib/libraries/TransferHelper.sol';
 
 import './interfaces/IAhojV1Router.sol';
 import './libraries/AhojV1Library.sol';
@@ -322,7 +323,7 @@ contract AhojV1Router is IAhojV1Router {
         for (uint i; i < path.length - 1; i++) {
             (address input, address output) = (path[i], path[i + 1]);
             (address token0,) = AhojV1Library.sortTokens(input, output);
-            IAhojV1RouterPair pair = IAhojV1RouterPair(AhojV1Library.pairFor(factory, input, output));
+            IAhojV1Pair pair = IAhojV1Pair(AhojV1Library.pairFor(factory, input, output));
             uint amountInput;
             uint amountOutput;
             { // scope to avoid stack too deep errors
